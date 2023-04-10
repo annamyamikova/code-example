@@ -1,0 +1,106 @@
+@import "variables";
+
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin clearfix() {
+  &:after {
+    content: '';
+
+    display: table;
+
+    clear: both;
+  }
+}
+
+@mixin orientation($orientation: landscape) {
+  @media (orientation: $orientation) {
+    @content
+  }
+}
+
+@mixin breakpoint($width) {
+  @media (max-width: $width) {
+    @content
+  }
+}
+
+@mixin breakpoint-min-width($width) {
+  @media (min-width: $width) {
+    @content
+  }
+}
+
+@mixin breakpoint-max-height($height) {
+  @media (max-height: $height) {
+    @content
+  }
+}
+
+@mixin breakpoint-max-size($width, $height) {
+  @media (max-width: $width) and (max-height: $height) {
+    @content
+  }
+}
+
+@mixin breakpoint-min-size($width, $height) {
+  @media (min-width: $width) and (min-height: $height) {
+    @content
+  }
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function em($target, $context: $typography-primary-font-size) {
+  @if ($target == '0px' or $target == 0) {
+    @return 0;
+  }
+
+  @return round(($target / $context * 1em) * 100) / 100;
+}
+
+@function vmin($target, $context: $bp-val-table-height) {
+  @if ($target == '0px' or $target == 0) {
+    @return 0;
+  }
+
+  @return (round(strip-unit($target) / $context * 10000) / 100) * 1vmin;
+  //@return div(round(($target / $context * 1vmin) * 10000), 100);
+}
+
+@function vmax($target, $context: $bp-desktop) {
+  @if ($target == '0px' or $target == 0) {
+    @return 0;
+  }
+
+  @return round(($target / $context * 1vmax) * 10000) / 100;
+}
+
+@function vw($target, $context: $bp-desktop) {
+  @if ($target == '0px' or $target == 0) {
+    @return 0;
+  }
+
+  @return round(($target / $context * 1vw) * 10000) / 100;
+}
+
+@function vh($target, $context: $bp-desktop) {
+  @if ($target == '0px' or $target == 0) {
+    @return 0;
+  }
+
+  @return round(($target / $context * 1vh) * 10000) / 100;
+}

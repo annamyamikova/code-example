@@ -1,0 +1,68 @@
+$color-primary: #6EC1E4;
+$color-secondary: #54595F;
+$color-text: #7A7A7A;
+$color-accent: #61CE70;
+$color-black-text: #000000;
+$color-white: #FFFFFF;
+$color-blue: #0070A6;
+$color-subtitle: #5AC1A7;
+$color-indigo: #4B0082;
+$color-bright-blue: #667EEA;
+$color-red: red;
+$color-placeholder: #c4c4c4;
+
+$typography-primary-font-size: 20px;
+$typography-secondary-font-size: vmin(45px);
+$typography-text-font-size: 3vmin;
+$typography-mb-text-font-size: calc(2vmin + 1rem);
+$typography-below-mb-text-font-size: calc(1vmin + 1rem);
+$typography-accent-font-size: vmin(25px);
+$typography-subtitle-font-size: vmin(20px);
+$typography-h1-font-size: 6vmin;
+$typography-h2-font-size: 5vmin;
+$typography-h3-font-size: 4vmin;
+$typography-h4-font-size: 3vmin;
+$typography-mb-h1-font-size: calc(5vmin + 0.5rem);
+$typography-mb-h2-font-size: calc(4vmin + 1rem);
+$typography-mb-h3-font-size: calc(3vmin + 1rem);
+$typography-mb-h4-font-size: calc(2vmin + 1rem);
+
+$typography-text-font-weight: 100;
+$typography-primary-font-weight: 300;
+$typography-accent-font-weight: 500;
+$typography-subtitle-font-weight: 600;
+$typography-title-font-weight: 800;
+
+$typography-h1-line-height: 5vmin;
+
+$icon-list-icon-size: vmin(14px);
+
+$typography-font-family: "Roboto";
+
+// - desktop
+$bp-val-desktop: 1400;
+$bp-val-small-desktop: 1200;
+$bp-val-desktop-height: 900;
+// - ipad
+$bp-val-tablet: 700;
+$bp-val-table-height: 700;
+$bp-val-tablet-landscape: 1024;
+// - mobile
+$bp-val-mobile: 400;
+$bp-val-small-mobile: 350;
+$bp-val-mobile-height: 800;
+$bp-val-orientation-height: 450;
+$bt-val-mobile-max-width: 550;
+$bt-val-big-mobile-max-width: 450;
+
+$bp-mobile: #{$bp-val-mobile}px;
+$bp-small-mobile: #{$bp-val-small-mobile}px;
+$bp-below-tablet: #{$bt-val-mobile-max-width}px;
+$bp-tablet: #{$bp-val-tablet-landscape}px;
+$bp-tablet-small: #{$bp-val-tablet}px;
+$bp-mobile-big: #{$bt-val-big-mobile-max-width}px;
+$bp-below-mobile: #{$bp-val-mobile-height}px;
+$bp-orientation-mobile: #{$bp-val-orientation-height}px;
+$bp-small-desktop: #{$bp-val-small-desktop}px;
+$bp-desktop: #{$bp-val-desktop}px;
+$bp-desktop-only: #{$bp-val-tablet-landscape + 1}px;

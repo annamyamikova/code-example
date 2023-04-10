@@ -1,0 +1,84 @@
+@import 'src/styles/variables';
+@import 'src/styles/breakpoints';
+@import 'src/styles/mixins';
+
+.Wrapper {
+  .Landscape {
+    display: none;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.LogoutGame {
+  position: absolute;
+  top: vmin(10px);
+  left: vmin(10px);
+  z-index: 10;
+
+  svg {
+    width: calc(2vmin + 1rem);
+    height: calc(2vmin + 1rem);
+  }
+}
+
+.ParticipantsCount {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: vmin(10px);
+  top: vmin(10px);
+  gap: vmin(5px);
+  transition: opacity 2s;
+  opacity: 1;
+  font-size: vmin(15px);
+
+  p {
+    margin: auto;
+  }
+
+  svg {
+    width: calc(2vmin + 1rem);
+    height: calc(2vmin + 1rem);
+  }
+}
+
+.NoneContent {
+  opacity: 0;
+}
+
+.Container {
+  overflow: auto;
+  height: 100%;
+  padding: vmin(130px) vmin(10px);
+  text-align: center;
+}
+
+.TextModal {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-40%, -50%);
+  background-color: $color-white;
+  padding: vmin(20px);
+}
+
+.TeamName {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: vmin(25px) 25% vmin(5px);
+  background-color: #fff;
+}
+
+.Modal {
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: vmin(20px) vmin(30px);
+}
+

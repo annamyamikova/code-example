@@ -1,0 +1,19 @@
+@import 'src/styles/mixins';
+
+.root {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paper {
+  width: vmin(300px);
+
+  padding: vmin(30px);
+}
+
+.submitBtn {
+  width: 100%;
+}

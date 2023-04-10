@@ -1,0 +1,12 @@
+@import 'src/styles/mixins';
+
+.Wrapper {
+  height: 100%;
+  padding: vmin(10px);
+}
+
+.Container {
+  h2 {
+    margin-bottom: vmin(80px);
+  }
+}

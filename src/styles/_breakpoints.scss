@@ -1,0 +1,86 @@
+@import "variables";
+
+@mixin mobile($overwriteVal: null) {
+  @if $overwriteVal {
+    @media (max-width: #{$overwriteVal}) {
+      @content;
+    }
+  } @else {
+    @media (max-width: #{$bp-mobile}) {
+      @content;
+    }
+  }
+}
+
+@mixin small-mobile($overwriteVal: null) {
+  @if $overwriteVal {
+    @media (max-width: #{$overwriteVal}) {
+      @content;
+    }
+  } @else {
+    @media (max-width: #{$bp-small-mobile}) {
+      @content;
+    }
+  }
+}
+
+@mixin big-mobile($overwriteVal: null) {
+  @if $overwriteVal {
+    @media (max-width: #{$overwriteVal}) {
+      @content;
+    }
+  } @else {
+    @media (max-width: #{$bp-mobile-big}) {
+      @content;
+    }
+  }
+}
+
+@mixin huge-mobile($overwriteVal: null) {
+  @if $overwriteVal {
+    @media (max-width: #{$overwriteVal}) {
+      @content;
+    }
+  } @else {
+    @media (max-width: #{$bp-below-tablet}) {
+      @content;
+    }
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$bp-tablet}) {
+    @content;
+  }
+}
+
+@mixin small-tablet {
+  @media (max-width: #{$bp-tablet-small}) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media (max-width: #{$bp-small-desktop}) {
+    @content;
+  }
+}
+
+@mixin below-mobile-height {
+  @media (max-height: #{$bp-below-mobile}) {
+    @content;
+  }
+}
+
+@mixin orientation-mobile-height {
+  @media (max-height: #{$bp-orientation-mobile}) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media screen and (min-aspect-ratio: 13/9) and (max-width: #{$bp-tablet-small}) {
+    @content;
+  }
+}
+

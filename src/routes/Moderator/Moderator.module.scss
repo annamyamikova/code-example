@@ -1,0 +1,119 @@
+@import 'src/styles/variables';
+@import 'src/styles/breakpoints';
+@import 'src/styles/mixins';
+
+.Wrapper {
+  .Landscape {
+    display: none;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.Tabs {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: vmin(60px);
+  background-color: white;
+  max-height: 48px;
+}
+
+.ParticipantsCount {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: vmin(10px);
+  top: vmin(10px);
+  gap: vmin(5px);
+  transition: opacity 2s;
+  opacity: 1;
+  font-size: vmin(15px);
+  cursor: pointer;
+
+  p {
+    margin: auto;
+  }
+
+  svg {
+    width: calc(2vmin + 1rem);
+    height: calc(2vmin + 1rem);
+  }
+}
+
+.LogoutGame {
+  position: absolute;
+  top: vmin(10px);
+  left: vmin(10px);
+  cursor: pointer;
+
+  svg {
+    width: calc(2vmin + 1rem);
+    height: calc(2vmin + 1rem);
+  }
+}
+
+.NoneContent {
+  opacity: 0;
+}
+
+.Container {
+  height: 100%;
+  padding: 0 vmin(10px) 48px;
+  text-align: center;
+}
+
+.TextModal {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-40%, -50%);
+  background-color: $color-white;
+  padding: vmin(20px);
+}
+
+.Buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: vmin(15px);
+}
+
+.Modal {
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: vmin(20px) vmin(30px);
+}
+
+.Line {
+  border-bottom: 1px solid #d0cdcd;
+  width: 100%;
+  height: vmin(5px);
+}
+
+.Disconnected {
+  color: $color-red;
+}
+
+.DisconnectedTeam {
+  padding: vmin(5px);
+}
+
+.HeaderContainer {
+  width: 100%;
+  height: 30px;
+  position: relative;
+  background-color: white;
+  margin-bottom: 1vmin;
+  z-index: 1;
+
+  h5 {
+    margin: 0 !important;
+    padding: 2vmin 0;
+  }
+}

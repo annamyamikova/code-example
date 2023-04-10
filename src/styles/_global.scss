@@ -1,0 +1,168 @@
+@import "variables";
+@import "breakpoints";
+@import 'mixins';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: vmin($typography-primary-font-size);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  font-family: $typography-font-family, Sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+}
+
+strong {
+  font-weight: $typography-accent-font-weight;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+h1 {
+  color: $color-black-text;
+  font-size: $typography-h1-font-size;
+  font-weight: $typography-title-font-weight;
+  line-height: $typography-h1-line-height;
+  margin-bottom: vmin(5px);
+  padding: 0;
+}
+
+h2 {
+  color: $color-black-text;
+  font-size: $typography-h2-font-size;
+  font-weight: $typography-title-font-weight;
+}
+
+h3 {
+  color: $color-black-text;
+  font-size: $typography-h3-font-size;
+  font-weight: $typography-subtitle-font-weight;
+}
+
+h4 {
+  color: $color-blue;
+  font-size: $typography-h4-font-size;
+  font-weight: $typography-primary-font-weight;
+}
+
+h5 {
+  color: $color-placeholder;
+  font-size: $typography-accent-font-size;
+  font-weight: $typography-accent-font-weight;
+  margin: 5vmin 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow-wrap: break-word;
+  color: $color-black-text;
+  font-size: $typography-text-font-size;
+  font-weight: $typography-accent-font-weight;
+  word-break: break-word;
+}
+
+span, th, td {
+  font-size: $typography-text-font-size !important;
+}
+
+table {
+  svg {
+    width: calc(2vmin + 1rem) !important;
+    height: calc(2vmin + 1rem) !important;
+  }
+}
+
+a {
+  font-weight: $typography-text-font-weight;
+  color: $color-white;
+  fill: $color-white;
+  font-size: 1.2rem !important;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  color: $color-black-text;
+  font-size: $typography-text-font-size;
+  font-weight: $typography-text-font-weight;
+  padding-bottom: vmin(5px);
+  margin-left: vmin(30px);
+
+  p {
+    display: inline;
+  }
+
+  &::before {
+    content: "";
+    background-color: $color-blue;
+    display: inline-block;
+    margin: vmin(2px) vmin(15px) vmin(2px) vmin(-30px);
+    font-size: vmin(14px);
+    width: vmin(14px);
+    height: vmin(14px);
+    border-radius: 50%;
+  }
+}
+
+input, select, textarea {
+  font-family: $typography-font-family, Sans-serif;
+  font-size: $typography-text-font-size;
+  font-weight: $typography-text-font-weight;
+}
+
+button {
+  font-size: vmin(20px) !important;
+  font-weight: $typography-primary-font-weight;
+  font-family: $typography-font-family, Sans-serif;
+  background-color: $color-blue;
+  color: $color-white;
+  border: vmin(2px) solid $color-blue;
+  border-radius: vmin(15px);
+  padding: vmin(12px) vmin(39px);
+  margin: auto;
+  cursor: pointer;
+  transition: all .3s;
+
+  &:hover {
+    background-color: white;
+    color: $color-blue;
+
+    a {
+      color: $color-blue;
+    }
+  }
+}
+
+button > a {
+  font-weight: 300 !important;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#root {
+  height: 100%;
+}
+
+input {
+  font-size: calc(1vmin + 1rem) !important;
+}
